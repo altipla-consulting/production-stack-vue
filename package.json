@@ -1,0 +1,39 @@
+{
+  "name": "@altipla/production-stack-vue",
+  "version": "0.0.0",
+  "description": "Production ready configurations for our Vue apps.",
+  "main": "./index.js",
+  "module": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altipla-consulting/production-stack-vue.git"
+  },
+  "author": "Altipla Consulting",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/altipla-consulting/production-stack-vue/issues"
+  },
+  "homepage": "https://github.com/altipla-consulting/production-stack-vue#readme",
+  "dependencies": {
+    "@sentry/browser": "^5.19.1",
+    "@sentry/integrations": "^5.19.1"
+  },
+  "devDependencies": {
+    "@altipla/eslint-config-vue": "^0.1.2",
+    "eslint": "^7.4.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint --fix"
+  }
+}
