@@ -1,6 +1,6 @@
 
 import * as Sentry from '@sentry/browser'
-import { Vue as VueIntegration } from '@sentry/integrations'
+import { Vue as VueIntegration, ExtraErrorData } from '@sentry/integrations'
 
 
 export default {
@@ -13,6 +13,7 @@ export default {
             Vue: app,
             logErrors: true,
           }),
+          new ExtraErrorData,
         ],
       })
     }
