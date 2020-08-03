@@ -4,10 +4,11 @@ import { Vue as VueIntegration, ExtraErrorData } from '@sentry/integrations'
 
 
 export default {
-  install(app, options) {
-    if (process.env.NODE_ENV === 'production') {
+  install(app, { sentryDSN = '', version = 'dev' }) {
+    if (process.env.NODE_ENV === 'production' && sentryDSN) {
       Sentry.init({
-        dsn: options.sentryDSN,
+        dsn: sentryDSN,
+        release: version,
         integrations: [
           new VueIntegration({
             Vue: app,
