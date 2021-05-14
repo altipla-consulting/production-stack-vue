@@ -4,6 +4,9 @@
   "description": "Production ready configurations for our Vue apps.",
   "main": "./index.js",
   "module": "./index.js",
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/altipla-consulting/production-stack-vue.git"
