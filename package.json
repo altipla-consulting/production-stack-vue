@@ -14,23 +14,25 @@
     "url": "https://github.com/altipla-consulting/production-stack-vue/issues"
   },
   "homepage": "https://github.com/altipla-consulting/production-stack-vue#readme",
+  "peerDependencies": {
+    "vue": "*",
+    "vue-router": "*"
+  },
   "dependencies": {
-    "@sentry/browser": "^5.19.1",
-    "@sentry/integrations": "^5.19.1"
+    "@sentry/integrations": "^6.3.6",
+    "@sentry/vue": "^6.3.6"
   },
-  "devDependencies": {
-    "@altipla/eslint-config-vue": "^0.1.2",
-    "eslint": "^7.4.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+  "peerDependenciesMeta": {
+    "vue-router": {
+      "optional": true
     }
   },
-  "lint-staged": {
-    "*.{js,vue}": "eslint --fix"
+  "devDependencies": {
+    "@altipla/eslint-config-vue": "^0.2.0",
+    "eslint": "^7.26.0",
+    "eslint-plugin-vue": "^7.9.0"
+  },
+  "scripts": {
+    "lint": "eslint ."
   }
 }

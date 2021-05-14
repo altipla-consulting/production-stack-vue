@@ -1,19 +1,17 @@
 
-import * as Sentry from '@sentry/browser'
-import { Vue as VueIntegration, ExtraErrorData } from '@sentry/integrations'
+import * as Sentry from '@sentry/vue'
+import { ExtraErrorData } from '@sentry/integrations'
 
 
 export default {
   install(app, { sentryDSN = '', version = 'dev' }) {
-    if (process.env.NODE_ENV === 'production' && sentryDSN) {
+    if (import.meta.env.PRODUCTION && sentryDSN) {
       Sentry.init({
+        Vue: app,
         dsn: sentryDSN,
         release: version,
+        logErrors: true,
         integrations: [
-          new VueIntegration({
-            Vue: app,
-            logErrors: true,
-          }),
           new ExtraErrorData,
         ],
       })
