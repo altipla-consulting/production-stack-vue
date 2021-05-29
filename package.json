@@ -1,6 +1,6 @@
 {
   "name": "@altipla/production-stack-vue",
-  "version": "0.0.0",
+  "version": "0.5.0",
   "description": "Production ready configurations for our Vue apps.",
   "main": "./src/index.js",
   "type": "module",
