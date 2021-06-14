@@ -31,7 +31,7 @@
     }
   },
   "devDependencies": {
-    "@altipla/eslint-config-vue": "^0.2.0",
+    "@altipla/eslint-config-vue": "^0.3.1",
     "eslint": "^7.26.0",
     "eslint-plugin-vue": "^7.9.0"
   },
